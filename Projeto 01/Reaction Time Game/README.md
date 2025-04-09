@@ -17,11 +17,14 @@
     <li>Buzzer</li>
 </ul>
 <p style="color:white; font-size:20px; text-align:left;">
-    A linguagem de programação utilizada foi o Micropython e foi usado o <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a> (VSCode) como ambiente de edição dos códigos assim como a extensão <a href="https://github.com/paulober/MicroPico" target="_blank">MicroPico</a> para permitir a interface entre computador e microntrolador.  
+    A linguagem de programação utilizada foi o Micropython e foi usado o <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a> (VSCode) como ambiente de edição dos códigos assim como a extensão <a href="https://github.com/paulober/MicroPico" target="_blank">MicroPico</a> para permitir a interface entre computador e microntrolador.
+</p>
+Após a inicialização o matriz de LEDs que simula um farol é acessa totalmente na cor vermelha e, os jogadores fazem a seleção de quem irá jogar primeiro. Este jogador então realiza a sua jogada, pressionando ambos os botões A e B simultaneamente. Em seguida, se inicia o processo de largada, onde cada uma das linhas horizontais horizontais da matriz de LEDs é apagada da primeira à última enquanto o buzzer reproduz um bipe. Após a matriz ser totalmente apagada, é contado um tempo aleatório entre 1 e 5 segundos e a matriz é acessa totalmente na cor verde, sendo iniciada a contagem do tempo de reação, que cessa quando o usuário pressiona ambos os botões A e B novamente. O tempo de reação medido na última jogada de cada um dos jogadores é apresentado no Display OLED. O sistema não limita a quandidade de jogadas, portanto, os jogadores podem permanecer realizando jogadas alternadas ou não de maneira indefinida.
+    
 </p>
 <h2 style="color:white; font-size:25px; text-align:left;">Fluxo do código</h2>
 <p style="color:white; font-size:20px; text-align:left;">
-    O Script <a href="https://github.com/JCARNEIROX/EA801/blob/main/Projeto1/main.py" target="_blank">main.py</a> segue a dinâmica descrita de acordo com o fluxograma da imagem à seguir:
+    O Script <a href="https://github.com/JCARNEIROX/EA801/blob/main/Projeto1/main.py" target="_blank">main.py</a> segue a dinâmica descrita de acordo com o fluxograma abaixo:
 </p>
 <div align="center">
     <img src="https://github.com/JCARNEIROX/EA801/blob/main/Projeto1/imagens/Fluxograma.jpg">
@@ -33,17 +36,21 @@
 <div align="center">
     <table>
         <tr>
-            <td><img src="https://github.com/JCARNEIROX/EA801/blob/main/Projeto1/imagens/frente.jpg" width="300" height="300"></td>
-            <td><img src="https://github.com/JCARNEIROX/EA801/blob/main/Projeto1/imagens/inicio.jpg" width="300" height="300"></td>
+            <td align="center" ><img src="https://github.com/JCARNEIROX/EA801/blob/main/Projeto1/imagens/frente.jpg" width="300" height="300"> 
+                <br>Inicialização</td> 
+            <td align="center" ><img src="https://github.com/JCARNEIROX/EA801/blob/main/Projeto1/imagens/inicio.jpg" width="300" height="300">
+            <br>Inicio de jogada </td>
         </tr>
         <tr>
-            <td><img src="https://github.com/JCARNEIROX/EA801/blob/main/Projeto1/imagens/start.jpg" width="300" height="300"></td>
-            <td><img src="https://github.com/JCARNEIROX/EA801/blob/main/Projeto1/imagens/start.jpg" width="300" height="300"></td>
+            <td align="center" ><img src="https://github.com/JCARNEIROX/EA801/blob/main/Projeto1/imagens/start.jpg" width="300" height="300">
+             <br>Largada final</td>
+            <td align="center" ><img src="https://github.com/JCARNEIROX/EA801/blob/main/Projeto1/imagens/start.jpg" width="300" height="300">
+             <br>Largada final</td>
         </tr>
     </table>
 </div>
 <p style="color:white; font-size:20px; text-align:left;">
-    A imagem acima mostra os estados que se passam durante o jogo na placa. A seguir tem-se um gif de uma simulação de uma jogada por um dos jogadores.
+    As imagens acima mostram os estados que se passam durante o jogo na placa. A seguir tem-se um gif de uma simulação de uma jogada por um dos jogadores.
 </p>
 <div align="center">
     <img src="https://github.com/JCARNEIROX/EA801/blob/main/Projeto1/imagens/gif.gif" width="600" height="600">
